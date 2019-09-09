@@ -72,7 +72,7 @@ class Igra :
 
     def Preveri(self, x) :
         self.x = x
-        if self.TTT[self.x] != ' ' and self.x <= 9:
+        if self.TTT[self.x] != ' ':
             return True
         else :
             return False
