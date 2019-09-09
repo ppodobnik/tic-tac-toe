@@ -19,7 +19,7 @@ class Igra :
         self.simbol2 = simbol2
         self.score1 = 0 
         self.score2 = 0
-        self.Stevec = 0
+        self.stevec = 0
         self.TTT = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '] #10 jih je
         
 
@@ -32,7 +32,7 @@ class Igra :
     def Vstavi_simbol(self, simbol, indeks) : 
         self.simbol = simbol
         self.indeks = int(indeks)
-        self.Stevec += 1
+        self.stevec += 1
         self.TTT[self.indeks] = simbol
     
     
@@ -41,33 +41,33 @@ class Igra :
         for k in range(1, 8, 3) :
             if (self.TTT[k] == self.TTT[k+1] == self.TTT[k+2] == self.simbol1) :
                 self.score1 += 1
-                self.Stevec = 0
+                self.stevec = 0
                 return True
             if (self.TTT[k] == self.TTT[k+1] == self.TTT[k+2] == self.simbol2) :
                 self.score2 += 1
-                self.Stevec = 0
+                self.stevec = 0
                 return True
 
         #check col
         for l in range(1, 4) :
             if (self.TTT[l] == self.TTT[l+3] == self.TTT[l+6] == self.simbol1) :
                 self.score1 += 1
-                self.Stevec = 0
+                self.stevec = 0
                 return True
             if (self.TTT[l] == self.TTT[l+3] == self.TTT[l+6] == self.simbol2) :
                 self.score2 += 1
-                self.Stevec = 0
+                self.stevec = 0
                 return True
         
         #check diag
         d = 1
         if (self.TTT[d] == self.TTT[d+4] == self.TTT[d+8] == self.simbol1) or (self.TTT[d+2] == self.TTT[d+4] == self.TTT[d+6] == self.simbol1) :
             self.score1 += 1
-            self.Stevec = 0
+            self.stevec = 0
             return True
         if (self.TTT[d] == self.TTT[d+4] == self.TTT[d+8] == self.simbol2) or (self.TTT[d+2] == self.TTT[d+4] == self.TTT[d+6] == self.simbol2) :
             self.score2 += 1
-            self.Stevec = 0
+            self.stevec = 0
             return True
 
     def Preveri(self, x) :
@@ -79,7 +79,7 @@ class Igra :
 
 
     def Preveri_rezultat(self) :
-        if self.Stevec == 9 :
+        if self.stevec == 9 :
             return True
         else :
             return False
