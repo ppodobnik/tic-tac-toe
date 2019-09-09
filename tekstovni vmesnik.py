@@ -57,7 +57,7 @@ while(True) :
         #DRUGI
         if Drugi == ime1 :
             print("\nNa vrsti je {}.".format(ime1))
-            while(1) : 
+            while(True) : 
                 i = input('Izberi polje. ')
                 if Tic.Preveri(int(i)) :
                     print("Na tem mestu je že simbol, izbiraj ponovno!\n")
@@ -67,7 +67,7 @@ while(True) :
                     break 
         else :
             print("\nNa vrsti je {}.".format(ime2))
-            while(1) :
+            while(True) :
                 i = input('Izberi polje. ')
                 if Tic.Preveri(int(i)) :
                     print("Na tem mestu je že simbol, izbiraj ponovno!\n")
@@ -93,7 +93,7 @@ while(True) :
 
     Tic.Boljsi()
     Tic.Rezultat()
-    Tic.Ponovi()
+    Tic.Sprazni()
        
     odg = input("\nAli želiš nadaljevati z igro? JA/NE \n")
     if Tic.Igraj_ponovno(odg) :
