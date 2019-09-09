@@ -107,7 +107,7 @@ class Igra :
         return print(" {} : {}".format(str(self.score1),str(self.score2)))  
 
 
-    def Ponovi(self) :
+    def Sprazni(self) :
         for i in range(10) :
             self.TTT[i] = ' '
 
